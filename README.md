@@ -1,1 +1,2 @@
-# local-chat-messenger
+# Chat messenger program
+
