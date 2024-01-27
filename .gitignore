@@ -1,0 +1,9 @@
+*.log
+*.pot
+# Python Bytecode
+__pycache__/
+*.pyc 
+# OS Generated File
+.DS_Store
+# Editor Specific
+.vscode/
