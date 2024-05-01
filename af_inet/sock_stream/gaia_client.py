@@ -1,3 +1,7 @@
+####################################################################################################
+# Run this program and wait for the response from gaia.cs.umass.edu
+####################################################################################################
+
 from socket import *
 
 server_name = 'gaia.cs.umass.edu'
@@ -16,11 +20,12 @@ client_socket.send(request)
 response = b''
 
 while True:
-    chunk = client_socket.recv(4096)
-    if not chunk:
+    data = client_socket.recv(4096)
+    if not data:
         break
-    response += chunk
+    response += data
 
+# By default, decode() method uses 'utf-8' encoding, but we're explicitly specifying it here
 print("Server Response: ", response.decode('utf-8'))
 
 client_socket.close()

@@ -5,7 +5,7 @@ import sys
 client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 
 server_address = os.path.expanduser('~/socket_file')
-print('connecting to {}'.format(server_address))
+print(f'connecting to {server_address}')
 
 # Connect to the server socket
 try:
@@ -17,7 +17,7 @@ except socket.error as err:
 try:
     message = b'Sending a message to the server side'
     client_socket.sendall(message)
-    # Set timeout to 10 seconds, so that if there is no response from the server, the program will move on.
+    # Set timeout to 2 seconds, so that if there is no response from the server, the program will move on.
     client_socket.settimeout(2)
 
     try:

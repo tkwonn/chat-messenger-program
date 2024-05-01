@@ -9,10 +9,10 @@ server_socket.bind(('', server_port))
 print("The server is ready to receive")
 
 while True:
-    # Read from UDP socket into message, getting client's
-    # IP address and port number
+    # Read from UDP socket into message, getting client's IP address and port number
     message, client_address = server_socket.recvfrom(2048)
-    print(client_address)
+    print(f'Client address: {client_address}')
+    
     modified_message = message.decode().upper()
     server_socket.sendto(modified_message.encode(), client_address)
 

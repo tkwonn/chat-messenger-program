@@ -6,7 +6,7 @@
 #  (ranging 1024 to 65535 that is currently not being used by any other UDP port in the host)
 #  We can add a line after we create the socket to associate a specific port number
 #  via bind() method like this, client_socket.bind(('', 15000))
-#  UDP socket is fully identified b a two-tuple consisting of
+#  UDP socket is fully identified by a two-tuple consisting of
 #  a destination IP address and a destination port number.
 # ######################################################
 
